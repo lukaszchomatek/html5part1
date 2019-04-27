@@ -1,0 +1,87 @@
+﻿@{
+    ViewBag.Title = "Studia.HMTL5.Przyklad2";
+}
+
+<div class="jumbotron">
+    <h1>Razor (Web Pages)</h1>
+    <p class="lead">Razor oferuje składnię pozwalającą operować na danych .NETowych w kodzie
+        widoku strony internetowej.</p>
+    <p><a href="https://www.asp.net/web-pages" class="btn btn-primary btn-lg">Więcej &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Razor a WebForms</h2>
+        <p>
+            Razor wspomaga tworzenie aplikacji internetowych z wykorzystaniem czystego HTML5.
+            W WebForms poza tagami HMTL dostępne były specjalne tagi <code>&lt;asp:...</code>,
+            dzięki którym można było osadzić w aplikacji kontrolki (również niestandardowe).
+            Takie rozwiązanie jest bardzo wygodne, jednakże programista ma ograniczony wpływ
+            na to, jak będzie wyglądać jego aplikacja.
+
+            WebForms ma jednak bardzo wygodny mechanizm obsługi zdarzeń (przykład z kalkulatorem)
+            oraz wiele wbudowanych mechanizmów pozwalających na łączenie modelu (danych)
+            z widokiem.</p>
+        <p>
+            Żeby móc w pełni korzystać z zalet HMTL5 należało więc stworzyć taki zestaw
+            funkcjonalności, który nie wymaga stosowania niestandardowych znaczników a jednocześnie
+            umożliwia programistom równie wygodny jak do tej pory sposób tworzenia aplikacji.</p>
+    </div>
+    <div class="col-md-4">
+        <h2>Po co więc WebForms?</h2>
+        <p>Z użyciem WebForms powstało bardzo wiele aplikacji. Ta technologia ma ciągle wielu
+        zwolenników i jest rozwijana.</p>    
+        <h2>Kiedy powstał Razor?</h2>
+        <p>Razor powstał jako silnik do wspomagania wiązań danych w ASP.NET MVC 3.0 (2011)</p>
+        <h2>Czy Razor to samodzielna technologia?</h2>
+        <p>Można wykorzystywać Razor jako osobną technologię (WebPages), jednakże najczęściej
+        występuje on razem z ASP.NET MVC</p>
+    </div>
+    <div class="col-md-4">
+        <h2>Czy muszę znać ASP.NET MVC</h2>
+        <p>Niekoniecznie. Razor można stosować nie korzystając z MVC. Tworzenie aplikacji
+        z wykorzystaniem tej technologii będzie realizowane na osobnym przedmiocie.</p>
+        <h2>Czy ta aplikacja wykorzystuje ASP.NET MVC</h2>
+        <p>W pewnym sensie tak. Aplikacja posiada kontrolery, jednakże nie wykonują one
+        żadnych operacji. Model nie jest również wymagany na potrzeby pokazanych przykładów.</p>
+    </div>
+</div>
+
+<div class="row">
+    <h2>Organizacja projektu .NET MVC</h2>
+    <div class="col-md-4">
+        <h2>Elementy wspólne z WebForms</h2>
+        <ul>
+            <li>App_Data - miejsce na lokalną bazę danych</li>
+            <li>App_Start - ładowanie skryptów i styli, routing</li>
+            <li>Content - style CSS</li>
+            <li>fonts - fonty obrazkowe</li>
+            <li>Scripts - skrypty JS</li>
+        </ul>
+        Zestawy skryptów i styli są identyczne jak w aplikacji WebForms.
+    </div>
+    <div class="col-md-4">
+        <h2>Elementy nowe/różne</h2>
+        <ul>
+            <li>Możliwość filtrowania żądań <code>App_Start\FilterConfig.cs</code></li>
+            <li>Folder kontrolerów</li>
+            <li>Folder modeli</li>
+            <li>Folder widoków - tutaj należy zwrócić uwagę na to, że istnieje folder Shared,
+            w którym trzymane są części wspólne dla widoków, w tym przypadku plik <code>
+                _Layout.cshtml</code> będący odpowiednikiem <code>Site.master</code> z WebForms</li>
+            <li>W folderze widoków znajdują się podfoldery, których nazwy powinny odzwierciedlać
+            istniejące w aplikacji kontrolery. W tym przypadku jest to <code>Home</code></li>
+        </ul>
+    </div>
+    <div class="col-md-4">
+        <img src="~/Images/project_mvc.png" alt="Ogranizacja projektu MVC" />
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <h2>Co dalej?</h2>
+        <p>
+            Przykłady wykorzystania Razor znajdują się w menu na górze strony.
+        </p>
+    </div>
+</div>

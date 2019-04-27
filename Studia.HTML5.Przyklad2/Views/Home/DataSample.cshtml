@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "Dane zewnętrzne - przykład";
+    var Students = Zaliczenie.Lib.Data.Students;
+
+    if (IsPost)
+    {
+
+        // Retrieve the numbers that the user entered.
+        var given = Request["inputName"];
+        var family = Request["inputFamilyName"];
+        var pesel = Request["inputPesel"];
+
+        Students.Add(new Zaliczenie.Lib.Student()
+        {
+            PESEL = pesel,
+            GivenName = given,
+            Surname = family
+        });
+    }
+}
+<div class="row">
+    <div class="col-md-6">
+        <h2>Lista studentów</h2>
+        <ul>
+            @foreach (var student in Students)
+            {
+            <li>@student.GivenName @student.Surname</li>}
+        </ul>
+    </div>
+    <div class="col-md-6">
+        <h2>Dodaj studenta</h2>
+        <form action="" method="post">
+            <div class="form-group">
+                <label for="inputName">Imię</label>
+                <input type="text" class="form-control" name="inputName" 
+                       placeholder="Imię">
+            </div>
+            <div class="form-group">
+                <label for="inputFamilyName">Nazwisko</label>
+                <input type="text" class="form-control" name="inputFamilyName" 
+                       placeholder="Nazwisko"/>
+            </div>
+            <div class="form-group">
+                <label for="inputPesel">PESEL</label>
+                <input type="text" class="form-control" placeholder="PESEL"
+                       name="inputPesel"/>
+            </div>
+            <input class="btn btn-primary" type="submit" value="Dodaj"/>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,117 @@
+﻿<!-- Blok komentarza w dokumencie HMTL -->
+<!--
+Składnia dokumentu HMTL5 jest bardzo prosta.
+    Na samym początku znajduje się linijka <!DOCTYPE html> informująca przeglądarkę o tym,
+    że jest to dokument HTML. Zaraz za tą linijką znajduje się znacznik <html>, natomiast
+    na samym końcu znacznik domykający </html>.
+    
+    Kolejnym znacznikiem jest <head>, czyli określenie nagłówka dokumentu. Można tu wstawić
+    tytuł strony - widoczny w oknie przeglądarki oraz pewne metadane określające dokument.
+    Domyślnie ustawione jest kodowanie na utf-8 (unicode).
+    
+    Po nagłówku znajduje się znacznik <body>, który określa zawartość strony. Wszystko, co
+    jest pomiędzy znacznikami <body> będzie wyświetlone.
+    
+    Istnieją znaczniki, które wymagają domknięcia, np. <h2>Oto nagłówek</h2>, natomiast część
+    znaczników takiego domknięcia nie wymaga, np. <input type="checkbox"/> Proszę zwrócić uwagę,
+    że znak slash jest tutaj na końcu znacznika - nie można go pomijać. 
+
+    Znaczniki nie powinny się krzyżować. Niepoprawne będzie np. takie zamykanie:
+    <hmtl>
+    <body>
+    </html>
+    </body>
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <h2>Jak to wygląda?!</h2>
+    Oto przykładowa strona w HMTL5. Dlaczego wygląda mało elegancko? Po prostu nie stosuje
+    żadnych styli CSS3 - jest to domyślny sposób renderowania dokumentów. Gdyby nie CSS, to
+    każda strona internetowa wyglądałaby mniej więcej w ten sposób.
+    <!--nagłówek-->
+    <h2>Co może znajdować się na stronie internetowej?</h2>
+    <!--akapit-->
+    <p>Tekst pisany w akapitach</p>
+    <p>Listy:</p>
+    <!--lista nienumerowana-->
+    <ul>
+        <li>element1</li>
+        <li>element2</li>
+        <li>element3</li>
+    </ul>
+    <p>Listy numerowane</p>
+    <ol>
+        <li>pies</li>
+        <li>kot</li>
+        <li>mysz</li>
+    </ol>
+    <p>Elementy formularza</p>
+    <!-- 
+        Jak widać, niektóre znaczniki posiadają tzw. atrybuty. Są to dodatkowe informacje
+        opisujące znacznik. W przypadku formularza atrybut "action" określa dokąd użytkownik
+        ma być przeniesiony po wysłaniu formularza (w tym wypadku do strony głównej).
+        Atrybut "post" określa sposób przesłania danych wpisanych w formularzu przez użytkownika
+        do serwera. Temat zostanie rozwinięty na innych przedmiotach.
+        -->
+    <form action="/" method="post">
+        <div>
+            <input type="checkbox" /><label>Zaznacz</label>
+        </div>
+        <div>
+            <input type="color" /><label>Wybierz kolor</label>
+        </div>
+        <div>
+            <input type="date"/><label>Wybierz datę</label>
+        </div>
+        <div>
+            <input type="datetime-local" /><label>Wybierz datę i godzinę</label>
+        </div>
+        <div>
+            <input type="email" /><label>Podaj email</label>
+        </div>
+        <div>
+            <input type="file" /><label>Wczytaj plik</label>
+        </div>
+        <div>
+            <input type="number" /><label>Podaj liczbę</label>
+        </div>
+        <div>
+            <input type="password" /><label>Podaj hasło</label>
+        </div>
+        <div>
+            <input type="text" /><label>Napisz coś</label>
+        </div>
+        <div>
+            <input type="submit" />
+        </div>
+    </form>
+    <button>Przycisk</button>
+    <!-- Tabela -->
+    <table>
+        <!-- Znacznik tr określa wierz tabeli -->
+        <tr>
+            <!-- Znacznik th określa komórkę będącą elementem nagłówka tabeli -->
+            <th>Imię</th>
+            <th>Nazwisko</th>
+        </tr>
+        <tr>
+            <!-- Znacznik td określa komórkę będącą elementem tabeli -->
+            <td>Jan</td>
+            <td>Kowalski</td>
+        </tr>
+        <tr>
+            <td>Zbigniew</td>
+            <td>Nowak</td>
+        </tr>
+    </table>
+
+    <p>
+        Opis znaczników HMTL można znaleźć <a href="https://www.w3schools.com/tags/">tutaj</a>
+    </p>
+</body>
+</html>

@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <style type="text/css">
+        /* Wszystkie paragrafy będą miały niebieski kolor tesktu */
+        p { color:blue }
+
+        /* Elementy z klasą red będą miały czerwony kolor tekstu */
+        .red {color:red }
+
+        /* Bardziej skomplikowany styl dla elementu */
+        .big-green {
+            color:lightgreen;
+            font-size:large;
+            font-weight:bold;
+        }
+
+        /* Sprytnie jest robić proste klasy, ponieważ można używać kilku klas
+            dla jednego elementu */
+        .italic {
+            font-style:italic
+        }
+
+        .bold {
+            font-weight:bold
+        }
+    </style>
+</head>
+<body>
+    <p>Przykładowy tekst</p>
+    <p class="red">Tekst w paragrafie napisany na czerwono</p>
+    <p class="big-green">Tekst w paragrafie</p>
+
+    <p class="bold italic">Bold italic</p>
+    <p class="italic">italic</p>
+    <p class="bold">bold</p>
+
+    <!-- Zagadka: Dlaczego 3 ostatnie linijki są niebieskie? -->
+    Visual Studio dobrze podpowiada przy tworzeniu styli, zarówno nazwy właściwości,
+    jak również wartości (np, kolorów).
+</body>
+</html>
